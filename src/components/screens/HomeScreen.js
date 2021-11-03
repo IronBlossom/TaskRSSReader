@@ -12,6 +12,7 @@ const HomeScreen =({channels,onChannelSelected, navigation}) => (<FlatList
         style={{flex: 1, padding: 10}}
         onPress={() => {
           onChannelSelected(item.url);
+          navigation.navigate('Entry', {title: item.name})
         }}>
         <Text>{item.name}</Text>
       </TouchableOpacity>
